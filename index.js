@@ -28,7 +28,7 @@ app.get("/", async(req,res)=>{
     res.cookie("testing","Hello",{
         httpOnly: true,
         secure: true,
-        sameSite: "none"
+        sameSite: "strict"
     });
     res.json({
         message: "Connected Successfully",
