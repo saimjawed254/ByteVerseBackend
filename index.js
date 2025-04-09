@@ -25,11 +25,18 @@ app.get("/", async(req,res)=>{
     // console.log(req);
     console.log("Connected");
 
-    res.cookie("testing","Hello",{
-        httpOnly: true,
-        // secure: true,
-        sameSite: "lax"
-    });
+    res.cookie('testing', '12345678', {
+        // "expires" - The cookie expires in 24 hours
+        expires: new Date(Date.now() + 86400000), 
+        // "path" - The cookie is accessible for APIs under the '/api' route
+        path: '/', 
+        // "domain" - The cookie belongs to the 'example.com' domain
+        domain: 'onrender.com', 
+        // "secure" - The cookie will be sent over HTTPS only
+        secure: true, 
+        // "HttpOnly" - The cookie cannot be accessed by client-side scripts
+        httpOnly: true
+      });
     res.json({
         message: "Connected Successfully",
     })
