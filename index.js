@@ -35,7 +35,6 @@ app.get("/", async(req,res)=>{
         // "secure" - The cookie will be sent over HTTPS only
         secure: true, 
         // "HttpOnly" - The cookie cannot be accessed by client-side scripts
-        httpOnly: true
       });
     res.json({
         message: "Connected Successfully",
