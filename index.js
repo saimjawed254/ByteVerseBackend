@@ -48,6 +48,11 @@ app.get("/register", async(req,res)=>{
     console.log("Hello ",req.cookies);
 })
 
+app.get("/logout", async(req,res)=>{
+    console.log("Hello ",req.cookies);
+    res.clearCookie('testing');
+})
+
 app.use(router);
 
 app.listen(3000, async(req,res)=>{
