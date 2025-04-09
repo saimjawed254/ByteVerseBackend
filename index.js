@@ -24,7 +24,6 @@ app.use(cors({
 app.get("/", async(req,res)=>{
     // console.log(req);
     console.log("Connected");
-    console.log(req.cookies);
 
     res.set("X-Content-Type-Options", "nosniff");
 
