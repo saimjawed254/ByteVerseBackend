@@ -26,6 +26,8 @@ app.get("/", async(req,res)=>{
     console.log("Connected");
     console.log(req.cookies);
 
+    res.set("X-Content-Type-Options", "nosniff");
+
     res.cookie('testing', '12345678', {
         // "expires" - The cookie expires in 24 hours
         expires: new Date(Date.now() + 86400000), 
@@ -39,7 +41,7 @@ app.get("/", async(req,res)=>{
         httpOnly: true
       });
     res.json({
-        message: "Connected Successfully",
+        message: "Connected Successfully" 
     })
 })
 
