@@ -40,6 +40,7 @@ const volunteerSchema = mongoose.Schema({
         data: Buffer,
         contentType: String
     },
+    otp: Number,
 })
 
 export const Volunteer = mongoose.model("Volunteer", volunteerSchema)

@@ -2,7 +2,7 @@
 import { mongoose } from "mongoose";
 import { config } from "dotenv";
 
-config({ path: "../../config.env" });
+config({ path: "config.env" });
 
 mongoose.connect(process.env.mongodbConnect)
 
@@ -40,6 +40,7 @@ const adminSchema = mongoose.Schema({
         data: Buffer,
         contentType: String
     },
+    otp: Number,
     usersId : Array
 
 })
